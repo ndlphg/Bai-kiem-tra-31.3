@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Bai kiem tra 31/03 - Nguyen Đo Lan Phuong - 21068011</title>
+    <link rel="stylesheet" href="ktra.css">
+</head>
+<body>
+    <header>
+        <h1>LAPTOP DÀNH CHO HỌC TRỰC TUYẾN</h1>
+    </header>
+    <main>
+        <center><section class="noi-bat">
+            <h2>Do ảnh hưởng của dịch COVID-19 trong năm học mới này, nhiều học sinh tại một số tỉnh, thành phố như Hà Nội, TPHCM sẽ cải tiến hình thức học tập online
+                trực tuyến dẫn đến nhu cầu mua máy tính xách tay (laptop) đồ học online tăng cao so với mọi năm. Các mẫu laptop hỗ trợ tốt trong học trực tuyến có thể tham khảo:
+            </h2>
+            <div class="san-pham">
+                <img src="image/Surface-Laptop-3-03.jpg" alt="Surface Laptop 3 15.3">
+                <h3>Surface Laptop 3</h3>
+                <i>@Ngọc Hoàng 08 Sep 2021 (Đã xem: 1994)</i>
+                <p>Thông tin sản phẩm và bảo hành</p>
+                <p>Tình trạng: Sản phẩm mới 100%, nguyên seal</p>
+                <p>Bảo hành: 12 tháng, 1 đổi 1, theo chính sách của Microsoft</p>
+                <p>Phụ kiện: Máy, Sạc, Fullbox</p>
+                <a href="#" class="btn-doc-them">Đọc tiếp</a>
+            </div>
+            <div class="san-pham">
+                <img src="image/samsung-x180-barbie.jpg" alt="Laptop Samsung X180 Barbie">
+                <h3>Laptop Samsung X180 Barbie</h3>
+                <i>@Minh Anh 03 Sep 2021 (Đã xem: 979)</i>
+                <p>Thông tin sản phẩm và bảo hành</p>
+                <p>Tình trạng: Sản phẩm mới 100%, nguyên seal</p>
+                <p>Bảo hành: 12 tháng, 1 đổi 1, theo chính sách của SamSung</p>
+                <p>Phụ kiện: Máy, Sạc, Fullbox</p>
+                <a href="#" class="btn-doc-them">Đọc tiếp</a>
+            </div>
+            <div class="san-pham">
+                <img src="image/thinkpad-x1-carbon-gen-9.jpg" alt="ThinkPad X1 Carbon Gen 9">
+                <h3>ThinkPad X1 Carbon Gen 9</h3>
+                <i>@Ngọc Ánh 06 Sep 2021 (Đã xem: 530)</i>
+                <p>Thông tin sản phẩm và bảo hành</p>
+                <p>Tình trạng: Sản phẩm mới 100%, nguyên seal</p>
+                <p>Bảo hành: 12 tháng, 1 đổi 1, theo chính sách của Lenovo</p>
+                <p>Phụ kiện: Máy, Sạc, Fullbox</p>
+                <a href="#" class="btn-doc-them">Đọc tiếp</a>
+            </div>
+        </section></center>
+    </main>
+    <div class="container">
+        <h2>LIÊN HỆ</h2>
+          <hr color="red" size="5px">
+          <form action="#">
+  <table style="width:100%">
+    <tr>
+      <td style="width:40%"><h4>Thông tin</h4></td>
+      <td style="width:60%"><h3>Hãy liên lạc với chúng tôi bất cứ khi nào!!!</h3></td>
+    </tr>
+    <tr>
+      <td><i class="fa-solid fa-location-dot"></i> Kp.6, P.Linh Trung, Tp. Thủ Đức, Tp.HCM</td>
+      <td class="form-group">
+        <input type="text" id="name" name="name" placeholder="Họ và tên">
+      </td>
+    </tr>
+    <tr>
+      <td><i class="fa-solid fa-envelope"></i> info@uit.edu.vn</td>
+      <td class="form-group">
+        <input type="email" id="email" name="email" placeholder="Địa chỉ e-mail">
+      </td>
+    </tr>
+    <tr>
+      <td><i class="fa-solid fa-phone"></i> +84 28 372 52002</td>
+      <td class="form-group">
+        <input type="text" id="header" name="header" placeholder="Tiêu đề bài viết">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder="Nhập chi tiết mô tả"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button type="submit">GỬI TIN NHẮN <i class="fa-regular fa-circle-check"></i></button></td>
+    </tr>
+  </table>
+  <div id="info"></div>
+</form>
+
+<script>
+const form = document.querySelector('form');
+const nameInput = document.querySelector('#name');
+const messageInput = document.querySelector('#message');
+const infoElement = document.querySelector('#info');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = nameInput.value;
+  const message = messageInput.value;
+
+  if (name === '') {
+    infoElement.textContent = 'Vui lòng nhập tên của bạn.';
+    return;
+  }
+
+  if (message === '') {
+    infoElement.textContent = 'Vui lòng nhập nội dung chi tiết.';
+    return;
+  }
+
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const day = now.getDay();
+  const month = now.getMonth() + 1;
+  const year = now.getFullYear();
+
+  const weekDays = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
+  const months = ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'];
+  
+  const formattedTime = `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+  const formattedDate = `${weekDays[day]}, ngày ${day}/${month}/${year}`;
+
+  infoElement.textContent = `@${name} - ${formattedTime} - ${formattedDate} - ${message}`;
+});
+
+messageInput.addEventListener('keyup', (event) => {
+  const message = event.target.value;
+  infoElement.textContent = `@${name} - ${formattedTime} - ${formattedDate} - ${message}`;
+});
+</script>
+
+</body>
+</html>
